@@ -1,0 +1,27 @@
+ <html>
+    <head>
+      <title>Control Motor a Pasos</title>
+      <style>
+        body {{ font-family: Arial; text-align: center; }}
+        button {{ padding: 15px; margin: 10px; font-size: 18px; }}
+        #reloj {{ width: 300px; height: 300px; border: 2px solid black; border-radius: 50%; margin: auto; position: relative; }}
+        #aguja {{
+          width: 2px; height: 120px; background: red;
+          position: absolute; top: 30px; left: 149px;
+          transform: rotate({angulo}deg);
+          transform-origin: bottom center;
+        }}
+      </style>
+    </head>
+    <body>
+      <h1>Control de Motor M35SP7T</h1>
+      <p>Pasos actuales: {posicion_pasos} / 48</p>
+      <div id="reloj">
+        <div id="aguja"></div>
+      </div>
+      <br>
+      <a href="/cw"><button>Clockwise</button></a>
+      <a href="/ccw"><button>Counter Clockwise</button></a>
+      <a href="/start"><button>Start</button></a>
+    </body>
+    </html>
